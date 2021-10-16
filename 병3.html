@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sketch</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
+
+<style>
+  .my {
+    background-color: cornflowerblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+</style>
+<script>
+  console.log("안녕하세요~")
+  navigator
+    .geolocation
+    .getCurrentPosition(pos)
+
+  function pos(p) {
+    
+    console.log(p.coords.latitude);
+    console.log(p.coords.longitude);
+    url= "https://www.google.com/maps/search/피부과/@"
+    +p.coords.latitude
+    +","
+    +p.coords.longitude
+    +","
+    +"14z"
+    console.log(url);
+  }
+
+  function newWin(){
+    open(url)
+  }
+
+</script>
+
+
+
+
+
+
+
+<body>
+  <div class="my">
+
+    <div class="box m-3">
+      <h1>철과상</h1>
+      치료법은 어쩌구 저쩌구 어떠ㅎ게 해야되고
+      </h1>
+    </div>
+
+    <div class="m-3">
+      <button class="button is-success is-fullwidth">
+        <a href="p5.html">
+
+          다시하기
+        </a>
+      </button>
+    </div>
+
+    <div class="m-3">
+      <button onclick="newWin()"  class="button is-danger fullwidth">
+
+          병원찾기
+      </button>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
